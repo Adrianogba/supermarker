@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.com.gateway</groupId>
-    <artifactId>api-gateway</artifactId>
+    <artifactId>gateway</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

@@ -14,7 +14,7 @@
         <module>fraud</module>
         <module>notification</module>
         <module>service-registry</module>
-        <module>api-gateway</module>
+        <module>gateway</module>
         <module>clients</module>
     </modules>
 
