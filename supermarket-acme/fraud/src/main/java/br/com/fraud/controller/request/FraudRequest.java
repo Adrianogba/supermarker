@@ -5,20 +5,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class FraudRequest {
 
     private String description;
-
     private Long customerId;
-
     private boolean isFraud;
-
     private LocalDateTime createAt;
 }

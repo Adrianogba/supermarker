@@ -10,6 +10,8 @@ import br.com.customer.repository.CustomerRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Slf4j
 @Service
 public class CustomerServiceImpl implements  CustomerService{
@@ -39,5 +41,10 @@ public class CustomerServiceImpl implements  CustomerService{
 
         log.info(String.format("is fraud %$ {}", internalResponseFraud.getIsFraud()));
         return (CustomerResponse) this.convertUtils.convertEntityToResponse(entity, CustomerResponse.class);
+    }
+
+    public List<CustomerResponse> listCustomers() {
+        log.info("Calling the method to list the customers {}", "");
+        return (List<CustomerResponse>) this.convertUtils.convertToListResponse(this.customerRepository.findAll(), CustomerResponse.class);
     }
 }

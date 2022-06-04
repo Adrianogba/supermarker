@@ -34,5 +34,14 @@ public class CustomerController {
         this.customerService.createCustomer(customerRequest);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
+
+    @Operation(summary = "list customers", description = "list the customers on the fraud system")
+    @ApiResponse(responseCode = "201", description = "Customers list obtained successfully")
+    @GetMapping
+    public ResponseEntity<?> listCustomers() {
+        log.info("calling controller to get customers list {}", "" );
+        var list =  this.customerService.listCustomers();
+        return new ResponseEntity<>(list, HttpStatus.OK);
+    }
 }
 

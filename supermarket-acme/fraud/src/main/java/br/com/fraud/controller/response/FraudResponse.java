@@ -8,10 +8,14 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class FraudResponse {
 
+    private Long id;
+    private String description;
+    private Long customerId;
     private boolean isFraud;
+    private LocalDateTime createAt;
 }
